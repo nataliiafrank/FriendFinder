@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEUAAAD///+/v78gICClpaWwsLAzMzMEBAStra03NzeoqKjt7e2NjY3j4+NOTk7y8vLMzMwRERHS0tJwcHAkJCTGxsZaWlpISEjo6OiFhYWUlJRUVFRlZWVfX1/d3d0WFhYsLCx0dHR9fX2bm5s9PT1tItUYAAAE7UlEQVR4nO3daXeqMBAG4IlejaAoIqJoW3tv+/9/4w24obJESCbLmfdrj+k8J2EPBFhr5nGYBeka7Mw6DbIw3rcToPlPqzgPTBukMs3jVQ9hsjn/nJutXjZ/kzeFo53pkt/ObvSGcJSCM51XybjWWCOMjqZL7RUuumQZyQgPpksdlEOncL40XeOAFBvWct4u3Lq4/d0iBqqoftsmnJiuUUlmzcKF6dqUhMOiSegHsBioi3qhJ8AyizqhH9vgNZNX4dZ0TSpT3aNehXPTRSnP/Eno3pl2V5aPwoPLB/qGHKrCyHQ1WhJVhMfyzNy3HO/CkelaNGV0E45Nl6Ip46vQ1y7kZSdCeaTwcCMsszsLE9N1aExSCjfediHAphCuTFehNSshjE0XoTWxEOami9AYDrkQuvFsom8CBnvTNWjOHvzeDMWGCKHpEjQnhMzjo2GRDPze0YhdDaSmS9CcFGx9Rq8q7vq4j3clnuK6cH0at8dBIb8MvPXHTxy1TB+5xNVbL5/hV6fNYeF01g1zVViMz4+GCTFeCIVv2jipyQshnCbdJGeF5QB92+eUsPrA1kshBB0TRB0Xclh2H9ydFsK/fj53hItuisvC4nam38L+Q9QNIb9Nl/BVCKchQCeENVOW/REWU117ncm4I+S9zkVdEsKp56mMO8L3LnfdEw4eo/YLn98Z8EvIh53MOCAU6XdJ6JCw/xWFK8LhW6Hlwo0CoN3CbXf9bgt/VQCtFv7xXqhiP2O1UM0gtVn4+iKrb8J3HzK5Jxx6YWi9cNANtkrsner0Iyn4mrRmZu9UILnNMPo1XWf/SB0Ni5dc2ufL2DubZizVg6arHJKpjNDpt3g+JYBbp18WlHmeNjVd5KDInLOZrnFYJC6dHH/VjITM+Tc+SUhC+0NCEtofEpLQ/pCQhFak9fpcndDW2wBe9CGMZ803ciVe3Iqaf16J0TvCUvfThsbocwsSkpCEJCQhCUlIQhKSkIQkJCEJSUhCEpKQhCQkIQlJSEISkpCEJCShP8LAe+G390L4njYllfjM7DZt/HklRoFt8WM+TVtISEL7Q0IS2h8SktD+kJCE9oeEJLQ/JCSh/SEhCe0PCUlof0hIQvtDQhLaHxKS0P6QkIT2h4QktD8kJKH9ISEJ7Q+2kAP2J7OwhWtIkb/shi1MIVDZnESwhQFkKpuTCLYwg9DzURpC4rWQQwx7dc1JBbsP98C+VbbXHVQhh4ABy5W1JxXkPsyFMFbYnkSQhbEQrhS2JxFk4UoI2QZ1b4or3LBCmKB+khdXmJRCtlPXYncQhRx27CxEvR5DFY4uQtRX+TBHabkCGlyaRFskC1M4ugnZUVWb3UEUHtldiLhWHaIwqgjZQVGj3cES8uv6ZxchW6poVSZofbhjj8K5klYlgia8rpV5FaKtOYgh5IJyW7/9JmQzFfV3B6UPOdxfir8L2QLl/BRnlC7urVWEguiFkD8ulFkVFr2oPRjCRbW1ByGbqFG0BWGUPn6Y4lEo9qi6R6pmoah++9jak5DNdR/6dffh8nnN6Geh9hM4zcLXpWpfhSzSeqWhTygG6DJ6ba1GKP6FxktijX04HtW1VisU/6S8d6Njp6NNuKv1NQoZSzbFz9QblQvPJW6SptYahYyt4lzD41MNfRjk8aq5tRZhkX0cZkGq8lm/SuE6DbIw3re39h9SfEcAaXOsDgAAAABJRU5ErkJggg=="
+    sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Survey Questions</h2>
+    <hr>
+    <h3>
+      <strong>About You</strong>
+    </h3>
+
+    <h4>
+      <label for="name">Name (Required)</label>
+    </h4>
+    <input type="name" class="form-control" id="name">
+
+    <h4>
+      <label for="photo">Link to Photo Image (Required)</label>
+    </h4>
+    <input type="photo" class="form-control" id="photo">
+    <hr>
+
+    <h4>Answer the questions below to find a perfect match!</h4>
+    <h3>
+      <strong>Question 1</strong>
+    </h3>
+    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 2</strong>
+    </h3>
+    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 3</strong>
+    </h3>
+    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 4</strong>
+    </h3>
+    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 5</strong>
+    </h3>
+    <h4>People can rarely upset you.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 6</strong>
+    </h3>
+    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 7</strong>
+    </h3>
+    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 8</strong>
+    </h3>
+    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 9</strong>
+    </h3>
+    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3>
+      <strong>Question 10</strong>
+    </h3>
+    <h4>You feel more energetic after spending time with a group of people.</h4>
+    <select class="questions">
+      <option selected="true" disabled="disabled" value="">Select an Option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br>
+    <br>
+
+    <button type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
+    <br>
+    <hr>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friends List</a> |
+          <a href="https://github.com/nataliiafrank/FriendFinder">GitHub Repo</a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    
+  </script>
+
+</body>
+
+</html>
