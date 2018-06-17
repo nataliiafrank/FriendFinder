@@ -169,9 +169,32 @@
     <br>
     <br>
 
-    <button type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
+    <button type="button" class="btn btn-success btn-lg btn-block" id="submit">
+      <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
     <br>
     <hr>
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Best Match</h4>
+          </div>
+          <div class="modal-body">
+            <p>Hello</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
     <footer class="footer">
       <div class="container">
@@ -185,7 +208,51 @@
   </div>
 
   <script>
-    
+    $('#submit').on('click', function (event) {
+      event.preventDefault();
+
+      var name = $('#name').val();
+      var photo = $('#photo').val();
+      var answers = $('.questions');
+      var scoresArr = [];
+
+      for (var i = 0; i < answers.length; i++) {
+        scoresArr.push(parseInt(answers[i].value));
+      }
+
+      if (!name || !photo || scoresArr.length !== 10) {
+        alert("Please fill out all fields before submitting!");
+      } else {
+        var newFriend = {
+          name: name,
+          photo: photo,
+          scores: scoresArr,
+        }
+      }
+
+      console.log(newFriend);
+
+      $.post('/api/friends', newFriend, function (data) {
+        if (data === true) {
+          alert("Success!");
+
+          $.get("api/bestmetch", function (data) {
+
+            $('.modal-body').html('<h2>' + data.name + '</h2>' + '<img src="' + data.photo + '">');
+
+            $('.modal').modal();
+
+          });
+        } else {
+          alert("Something went wrong!");
+        }
+
+        // Clear the form when submitting
+        $("#name").val("");
+        $("#photo").val("");
+        $(".questions").val("");
+      });
+    });
   </script>
 
 </body>
