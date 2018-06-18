@@ -48,7 +48,7 @@ var friends = [{
   },
   {
     "name":"Jennifer",
-    "photo":"https://media.vogue.com/r/pass/2017/08/08/00-MOBILE-jennifer-lawrence.jpg",
+    "photo":"https://s2.r29static.com//bin/entry/8c6/340x408,80/1933174/image.jpg",
     "scores":[
         1,
         2,
@@ -80,7 +80,7 @@ var friends = [{
   },
   {
     "name":"Benedict",
-    "photo":"https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-img.instyle.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F684xflex%2Fpublic%2F1467998426%2F070816-benedict-cumberbatch-bday-lead.jpg%3Fitok%3DTtxqoosv&w=700&q=85",
+    "photo":"http://pixel.nymag.com/imgs/daily/vulture/2015/12/07/07-benedict-cumberbatch.w529.h529.jpg",
     "scores":[
         1,
         1,
