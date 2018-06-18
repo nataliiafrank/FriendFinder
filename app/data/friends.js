@@ -1,6 +1,6 @@
 var friends = [{
     "name":"Kate",
-    "photo":"https://www.alux.com/wp-content/uploads/2017/08/Kate-Moss-Net-Worth-e1501751692990.jpg",
+    "photo":"https://vignette.wikia.nocookie.net/absolutelyfabulous/images/9/91/Kate_moss.jpg/revision/latest?cb=20150514232757",
     "scores":[
         5,
         1,

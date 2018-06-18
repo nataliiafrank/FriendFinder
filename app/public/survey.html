@@ -208,18 +208,22 @@
   </div>
 
   <script>
+    // Listen to click event
     $('#submit').on('click', function (event) {
       event.preventDefault();
-
+      
+      // Collect inputs from a user
       var name = $('#name').val();
       var photo = $('#photo').val();
       var answers = $('.questions');
       var scoresArr = [];
-
+      
+      // Add score values to the score array
       for (var i = 0; i < answers.length; i++) {
         scoresArr.push(parseInt(answers[i].value));
       }
 
+      // Form validation
       if (!name || !photo || scoresArr.length !== 10) {
         alert("Please fill out all fields before submitting!");
       } else {
@@ -230,16 +234,16 @@
         }
       }
 
-      console.log(newFriend);
-
+      // Post request
       $.post('/api/friends', newFriend, function (data) {
         if (data === true) {
           alert("Success!");
-
-          $.get("api/bestmetch", function (data) {
-
+          
+          // If newFriend was added display best match
+          $.get("api/bestmatch", function (data) {
+            // Add data to the modal
             $('.modal-body').html('<h2>' + data.name + '</h2>' + '<img src="' + data.photo + '">');
-
+            // Run modal
             $('.modal').modal();
 
           });
