@@ -15,7 +15,7 @@ module.exports = function (app) {
         // Variable for converted array
         var newescores = [];
 
-        // Loop through score array of string ans convert them into integers
+        // Loop through score array of string and convert them into integers
         for(var i=0; i < req.body.scores.length; i++){
             newescores.push(parseInt(req.body.scores[i]))
         }

@@ -220,12 +220,16 @@
       
       // Add score values to the score array
       for (var i = 0; i < answers.length; i++) {
-        scoresArr.push(parseInt(answers[i].value));
+        var score = parseInt(answers[i].value);
+        if(score > 0 && score < 6){
+          scoresArr.push(score);
+        }
       }
 
       // Form validation
       if (!name || !photo || scoresArr.length !== 10) {
         alert("Please fill out all fields before submitting!");
+        return;
       } else {
         var newFriend = {
           name: name,
